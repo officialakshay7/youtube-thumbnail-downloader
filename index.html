@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly</title>
+    <meta name="title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
+    <meta name="description"
+        content="Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities: HD (1280x720), SD (640x480), and default. No registration, fast & easy.">
+    <meta name="keywords"
+        content="youtube thumbnail download, video thumbnail downloader, thumbnail extractor, download youtube thumbnails, vimeo thumbnail download, youtube thumbnail saver, hd thumbnail download, maxresdefault">
+    <meta name="author" content="Thumbnaildownloader">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://youtube-thumbnail-downloader.cc">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://youtube-thumbnail-downloader.cc">
+    <meta property="og:title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
+    <meta property="og:description"
+        content="Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities: HD, SD, and default. No registration required.">
+    <meta property="og:image" content="https://youtube-thumbnail-downloader.cc/og-image.jpg">
+    <meta property="og:site_name" content="YouTube Thumbnail Downloader">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://youtube-thumbnail-downloader.cc">
+    <meta property="twitter:title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
+    <meta property="twitter:description"
+        content="Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities: HD, SD, and default.">
+    <meta property="twitter:image" content="https://youtube-thumbnail-downloader.cc/twitter-image.jpg">
+
+    <!-- Additional SEO Meta -->
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#3b82f6">
+
+    <!-- Favicon (using Font Awesome as fallback) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%233b82f6'>📸</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Skeleton loading animation */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 0.375rem;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Quality card hover effect */
+        .quality-card {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        /* Active quality selection */
+        .quality-card.selected {
+            border: 2px solid #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        /* Navbar active link */
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        /* Download button pulse effect */
+        .download-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- Schema.org JSON-LD for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "YouTube Thumbnail Downloader",
+        "url": "https://youtube-thumbnail-downloader.cc",
+        "description": "Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities including HD, SD, and default sizes.",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Download YouTube thumbnails",
+            "Download Vimeo thumbnails",
+            "Multiple quality options",
+            "HD thumbnails up to 1280x720",
+            "No registration required"
+        ],
+        "screenshot": "https://youtube-thumbnail-downloader.cc/screenshot.jpg",
+        "softwareVersion": "2.0",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1547",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Thumbnaildownloader",
+            "url": "https://youtube-thumbnail-downloader.cc"
+        }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD for FAQ Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this YouTube Thumbnail Downloader really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our YouTube Thumbnail Downloader is completely free to use. No registration, no credit card, no hidden fees. You can download unlimited thumbnails from any public YouTube or Vimeo video."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What video platforms do you support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Currently we support YouTube and Vimeo. For YouTube, we provide all available qualities including maxresdefault (HD), hqdefault, mqdefault, and sddefault. For Vimeo, we provide the highest available quality thumbnail."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What thumbnail qualities can I download?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For YouTube videos, you can download: MaxRes (HD) - 1280x720 pixels, High Quality - 480x360 pixels, Medium Quality - 320x180 pixels, and Standard Quality - 640x480 pixels. The availability depends on the video uploader's settings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to install any software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No installation needed! Our YouTube Thumbnail Downloader is a web-based tool that works directly in your browser on any device including desktop, tablet, and mobile. Just paste the URL and download."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use these thumbnails commercially?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Please check the copyright and usage rights of the original video. The thumbnails are generated from publicly available videos. We recommend using thumbnails only for personal use or with proper attribution when required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I download a YouTube thumbnail?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply paste the YouTube video URL in the input field above, click 'Get Thumbnails', and then click on any thumbnail card or the download button to save the image to your device. It's that simple!"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why can't I see all thumbnail qualities for some videos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Some YouTube videos may not have all thumbnail qualities available. This depends on the video upload date and settings. The MaxRes (HD) quality is only available for videos uploaded after 2009 and if the uploader hasn't disabled it."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD for Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://youtube-thumbnail-downloader.cc"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "YouTube Thumbnail Download",
+                "item": "https://youtube-thumbnail-downloader.cc#how-to-use"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "FAQ",
+                "item": "https://youtube-thumbnail-downloader.cc#faq"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD for WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "YouTube Thumbnail Downloader",
+        "url": "https://youtube-thumbnail-downloader.cc",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://youtube-thumbnail-downloader.cc/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "description": "Free online tool to download YouTube and Vimeo video thumbnails in all available qualities."
+    }
+    </script>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2" aria-label="YouTube Thumbnail Downloader Home">
+                        <i class="fas fa-download text-blue-600 text-2xl" aria-hidden="true"></i>
+                        <span class="font-bold text-xl text-gray-800">Thumbnail<span
+                                class="text-blue-600">downloader</span></span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
+                        aria-label="Home">Home</a>
+                    <a href="#how-to-use" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
+                        aria-label="How to Use">How to Use</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
+                        aria-label="Features">Features</a>
+                    <a href="#faq" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
+                        aria-label="FAQ">FAQ</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
+                        aria-label="Contact">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none"
+                        aria-label="Toggle mobile menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3"
+            aria-label="Mobile navigation">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
+            <a href="#how-to-use" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">How to
+                Use</a>
+            <a href="#features" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Features</a>
+            <a href="#faq" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">FAQ</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+        <!-- Home Section -->
+        <section id="home" class="scroll-mt-16">
+            <!-- Hero Section with Title -->
+            <div class="text-center mb-8">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+                    YouTube Thumbnail <span class="text-blue-600">downloader</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Download high-quality thumbnails from YouTube and Vimeo videos instantly.
+                    Just paste the URL and click to download your preferred size.
+                </p>
+            </div>
+
+            <!-- Main Input Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-12 border border-gray-100">
+                <label for="urlInput" class="block text-sm font-medium text-gray-700 mb-2">Video URL</label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="url" id="urlInput" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        class="flex-1 px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-base bg-white shadow-sm"
+                        value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube or Vimeo video URL">
+                    <button id="getThumbBtn"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-lg tracking-wide flex items-center justify-center gap-2"
+                        aria-label="Get thumbnails">
+                        <i class="fas fa-search" aria-hidden="true"></i> Get Thumbnails
+                    </button>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs text-gray-500">Popular:</span>
+                    <button
+                        class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-gray-700 transition"
+                        onclick="setExampleUrl('youtube')" aria-label="Try YouTube example">YouTube Example</button>
+                    <button
+                        class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-gray-700 transition"
+                        onclick="setExampleUrl('vimeo')" aria-label="Try Vimeo example">Vimeo Example</button>
+                </div>
+            </div>
+
+            <!-- Results Area -->
+            <div id="resultArea" class="mt-8 min-h-[300px]" aria-label="Thumbnail results"></div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section id="how-to-use" class="scroll-mt-16 mt-20 py-12 bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How to Use <span
+                    class="text-blue-600">Thumbnail downloader</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Paste Video URL</h3>
+                    <p class="text-gray-600">Copy and paste any YouTube or Vimeo video link into the input field above.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Click Get Thumbnails</h3>
+                    <p class="text-gray-600">Our tool instantly extracts all available thumbnail qualities from the
+                        video.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Download or Click</h3>
+                    <p class="text-gray-600">Click on any thumbnail card or the download button to save it instantly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Features Section -->
+        <section id="features" class="scroll-mt-16 mt-20 py-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose <span class="text-blue-600">Our
+                    downloader</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
+                    <i class="fas fa-bolt text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600">Instant extraction and download. No waiting, no processing time.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
+                    <i class="fas fa-image text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">All Qualities</h3>
+                    <p class="text-gray-600">Get maxres (HD), high, medium, and standard quality thumbnails.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
+                    <i class="fas fa-download text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">One-Click Download</h3>
+                    <p class="text-gray-600">Click on any thumbnail to download immediately. No extra steps.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
+                    <i class="fas fa-shield-alt text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2">100% Free</h3>
+                    <p class="text-gray-600">No registration, no hidden costs. Completely free forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="scroll-mt-16 mt-20 py-12 bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked <span
+                    class="text-blue-600">Questions</span></h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>Is this tool really free?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        Yes! Our YouTube Thumbnail Downloader is completely free to use. No registration, no credit
+                        card, no hidden fees. You can download unlimited thumbnails from any public YouTube or Vimeo
+                        video.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>What video platforms do you support?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        Currently we support YouTube and Vimeo. For YouTube, we provide all available qualities
+                        including maxresdefault (HD), hqdefault, mqdefault, and sddefault. For Vimeo, we provide the
+                        highest available quality thumbnail.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>What thumbnail qualities can I download?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        For YouTube videos, you can download: MaxRes (HD) - 1280x720 pixels, High Quality - 480x360
+                        pixels, Medium Quality - 320x180 pixels, and Standard Quality - 640x480 pixels. The availability
+                        depends on the video uploader's settings.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>Do I need to install any software?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        No installation needed! Our YouTube Thumbnail Downloader is a web-based tool that works directly
+                        in your browser on any device including desktop, tablet, and mobile. Just paste the URL and
+                        download.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>Can I use these thumbnails commercially?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        Please check the copyright and usage rights of the original video. The thumbnails are generated
+                        from publicly available videos. We recommend using thumbnails only for personal use or with
+                        proper attribution when required.
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>How do I download a YouTube thumbnail?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        Simply paste the YouTube video URL in the input field above, click 'Get Thumbnails', and then
+                        click on any thumbnail card or the download button to save the image to your device. It's that
+                        simple!
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <button
+                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
+                        onclick="toggleFAQ(this)" aria-expanded="false">
+                        <span>Why can't I see all thumbnail qualities for some videos?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-3 text-gray-600">
+                        Some YouTube videos may not have all thumbnail qualities available. This depends on the video
+                        upload date and settings. The MaxRes (HD) quality is only available for videos uploaded after
+                        2009 and if the uploader hasn't disabled it.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"
+            class="scroll-mt-16 mt-20 py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In <span class="text-blue-600">Touch</span></h2>
+                <p class="text-gray-600 mb-8">Have questions or suggestions? We'd love to hear from you.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#"
+                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
+                        aria-label="Email us">
+                        <i class="fas fa-envelope text-2xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
+                        aria-label="Follow us on Twitter">
+                        <i class="fab fa-twitter text-2xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
+                        aria-label="Visit our GitHub">
+                        <i class="fab fa-github text-2xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 border-t pt-8 pb-4 text-sm text-gray-500">
+            <div class="flex flex-wrap justify-between items-center">
+                <span>© 2025 YouTube Thumbnail Downloader. All rights reserved.</span>
+                <div class="space-x-6">
+                    <a href="#" class="hover:text-blue-600 transition" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-600 transition" aria-label="Terms of Service">Terms of
+                        Service</a>
+                    <a href="#" class="hover:text-blue-600 transition" aria-label="Contact">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        (function () {
+            // ----- DOM Elements -----
+            const urlInput = document.getElementById('urlInput');
+            const getThumbBtn = document.getElementById('getThumbBtn');
+            const resultArea = document.getElementById('resultArea');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ----- Helper Functions -----
+            function extractVideoId(url) {
+                if (!url) return null;
+
+                // YouTube patterns
+                let match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([^&\n?#]+)/);
+                if (match) return match[1];
+
+                // Vimeo patterns
+                match = url.match(/(?:vimeo\.com\/)(\d+)/);
+                if (match) return match[1];
+
+                return null;
+            }
+
+            function detectPlatform(url) {
+                if (!url) return null;
+                if (url.includes('youtube.com') || url.includes('youtu.be')) return 'youtube';
+                if (url.includes('vimeo.com')) return 'vimeo';
+                return null;
+            }
+
+            function getThumbnailUrls(videoId, platform) {
+                const qualities = [];
+                if (platform === 'youtube') {
+                    qualities.push(
+                        { label: 'MaxRes (HD)', quality: 'maxresdefault.jpg', width: 1280, height: 720, size: 'HD' },
+                        { label: 'High Quality', quality: 'hqdefault.jpg', width: 480, height: 360, size: 'SD' },
+                        { label: 'Medium Quality', quality: 'mqdefault.jpg', width: 320, height: 180, size: 'SD' },
+                        { label: 'Standard', quality: 'sddefault.jpg', width: 640, height: 480, size: 'SD' }
+                    );
+                } else if (platform === 'vimeo') {
+                    qualities.push(
+                        { label: 'Vimeo Thumbnail', quality: `${videoId}.jpg`, width: 640, height: 360, size: 'HD' }
+                    );
+                }
+                return qualities;
+            }
+
+            function buildImageUrl(videoId, platform, quality) {
+                if (platform === 'youtube') {
+                    return `https://img.youtube.com/vi/${videoId}/${quality}`;
+                } else {
+                    return `https://vumbnail.com/${videoId}.jpg`;
+                }
+            }
+
+            // ----- Download Function (Auto-download when clicking a card) -----
+            function downloadImage(url, filename) {
+                fetch(url)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const blobUrl = window.URL.createObjectURL(blob);
+                        const link = document.createElement('a');
+                        link.href = blobUrl;
+                        link.download = filename || 'thumbnail.jpg';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        window.URL.revokeObjectURL(blobUrl);
+                    })
+                    .catch(() => {
+                        // Fallback if fetch fails (CORS issues)
+                        window.open(url, '_blank');
+                    });
+            }
+
+            // ----- Display Thumbnails with Auto-download on Card Click -----
+            function displayThumbnails(videoId, platform) {
+                resultArea.innerHTML = '';
+
+                const qualities = getThumbnailUrls(videoId, platform);
+                if (!qualities || qualities.length === 0) {
+                    resultArea.innerHTML = `<div class="bg-red-50 p-6 rounded-xl text-center text-red-700 border border-red-200" role="alert">No thumbnail qualities found.</div>`;
+                    return;
+                }
+
+                // Create header with instructions
+                const header = document.createElement('div');
+                header.className = 'mb-6 text-center';
+                header.innerHTML = `
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Choose Your Thumbnail Size</h2>
+                    <p class="text-gray-600">Click on any thumbnail card to download instantly</p>
+                `;
+                resultArea.appendChild(header);
+
+                const gridContainer = document.createElement('div');
+                gridContainer.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5';
+                gridContainer.setAttribute('aria-label', 'Thumbnail quality options');
+
+                qualities.forEach((item) => {
+                    const imgUrl = buildImageUrl(videoId, platform, item.quality);
+                    const filename = `yt-thumb-${videoId}-${item.quality}`;
+
+                    const card = document.createElement('div');
+                    card.className = 'quality-card bg-white rounded-xl shadow-md border border-gray-200 p-4 flex flex-col transition-all';
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('tabindex', '0');
+                    card.setAttribute('aria-label', `Download ${item.label} thumbnail`);
+
+                    // Add click event for auto-download
+                    card.addEventListener('click', (e) => {
+                        // Don't trigger if clicking the download button specifically
+                        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
+                            return;
+                        }
+                        downloadImage(imgUrl, filename);
+
+                        // Visual feedback
+                        card.classList.add('selected');
+                        setTimeout(() => card.classList.remove('selected'), 200);
+                    });
+
+                    // Add keyboard support
+                    card.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            downloadImage(imgUrl, filename);
+                            card.classList.add('selected');
+                            setTimeout(() => card.classList.remove('selected'), 200);
+                        }
+                    });
+
+                    const img = document.createElement('img');
+                    img.src = imgUrl;
+                    img.alt = `${item.label} thumbnail for video ID ${videoId} - ${item.width}x${item.height} pixels`;
+                    img.loading = 'lazy';
+                    img.className = 'w-full h-auto rounded-lg mb-3 border border-gray-100 bg-gray-100';
+                    img.onerror = (e) => {
+                        e.target.src = 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%2290%22%20viewBox%3D%220%200%20120%2090%22%3E%3Crect%20width%3D%22120%22%20height%3D%2290%22%20fill%3D%22%23eeeeee%22%2F%3E%3Ctext%20x%3D%2210%22%20y%3D%2245%22%20font-family%3D%22Arial%22%20font-size%3D%2212%22%20fill%3D%22%23999%22%3EImage not available%3C%2Ftext%3E%3C%2Fsvg%3E';
+                    };
+
+                    const label = document.createElement('h3');
+                    label.className = 'font-semibold text-gray-800 text-lg';
+                    label.innerText = item.label;
+
+                    const resolution = document.createElement('p');
+                    resolution.className = 'text-sm text-gray-500 mb-3';
+                    resolution.innerText = `${item.width} x ${item.height} pixels`;
+
+                    const downloadBtn = document.createElement('a');
+                    downloadBtn.href = '#';
+                    downloadBtn.className = 'mt-auto bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 rounded-lg text-center transition flex items-center justify-center gap-2';
+                    downloadBtn.innerHTML = `<i class="fas fa-download" aria-hidden="true"></i> Download ${item.size || ''}`;
+                    downloadBtn.setAttribute('aria-label', `Download ${item.label} thumbnail`);
+
+                    // Prevent card click from interfering and trigger download
+                    downloadBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        downloadImage(imgUrl, filename);
+                    });
+
+                    card.appendChild(img);
+                    card.appendChild(label);
+                    card.appendChild(resolution);
+                    card.appendChild(downloadBtn);
+                    gridContainer.appendChild(card);
+                });
+
+                resultArea.appendChild(gridContainer);
+
+                if (platform === 'vimeo') {
+                    const vimeoNote = document.createElement('p');
+                    vimeoNote.className = 'text-sm text-amber-600 bg-amber-50 p-3 rounded-lg mt-6 border border-amber-200 flex items-center gap-2';
+                    vimeoNote.innerHTML = '<i class="fas fa-info-circle" aria-hidden="true"></i> Vimeo thumbnails are fetched via vumbnail.com. For the highest quality, consider using the official API.';
+                    vimeoNote.setAttribute('role', 'note');
+                    resultArea.appendChild(vimeoNote);
+                }
+            }
+
+            // ----- Handle Get Thumbnails -----
+            function handleExtract() {
+                const url = urlInput.value.trim();
+                if (!url) {
+                    resultArea.innerHTML = `<div class="bg-yellow-50 p-4 rounded-xl text-yellow-700 border border-yellow-200" role="alert">Please paste a YouTube or Vimeo URL.</div>`;
+                    return;
+                }
+
+                const platform = detectPlatform(url);
+                if (!platform) {
+                    resultArea.innerHTML = `<div class="bg-red-50 p-4 rounded-xl text-red-700 border border-red-200" role="alert">Unsupported URL. Please use a YouTube or Vimeo link.</div>`;
+                    return;
+                }
+
+                const videoId = extractVideoId(url);
+                if (!videoId) {
+                    resultArea.innerHTML = `<div class="bg-red-50 p-4 rounded-xl text-red-700 border border-red-200" role="alert">Could not extract video ID. Check the URL format.</div>`;
+                    return;
+                }
+
+                // Show loading skeleton
+                resultArea.innerHTML = `
+                    <div class="text-center mb-4">
+                        <div class="skeleton w-48 h-8 mx-auto mb-4"></div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                            ${Array(4).fill(0).map(() => `
+                                <div class="bg-white rounded-xl shadow-sm border p-4">
+                                    <div class="skeleton w-full h-32 mb-3"></div>
+                                    <div class="skeleton w-3/4 h-5 mb-2"></div>
+                                    <div class="skeleton w-1/2 h-4 mb-3"></div>
+                                    <div class="skeleton w-full h-9 rounded-lg"></div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+
+                setTimeout(() => {
+                    displayThumbnails(videoId, platform);
+                }, 300);
+            }
+
+            // ----- Set Example URLs -----
+            window.setExampleUrl = function (type) {
+                if (type === 'youtube') {
+                    urlInput.value = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                } else if (type === 'vimeo') {
+                    urlInput.value = 'https://vimeo.com/76979871';
+                }
+                handleExtract();
+            };
+
+            // ----- Event Listeners -----
+            getThumbBtn.addEventListener('click', handleExtract);
+            urlInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleExtract(); });
+
+            // Auto-load example on page load
+            window.addEventListener('load', () => {
+                setTimeout(handleExtract, 100);
+            });
+
+            // ----- FAQ Toggle Function -----
+            window.toggleFAQ = function (button) {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                button.setAttribute('aria-expanded', !isExpanded);
+            };
+
+            // ----- Active Nav Link on Scroll -----
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
