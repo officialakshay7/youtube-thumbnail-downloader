@@ -352,7 +352,7 @@
                 <div class="flex flex-col sm:flex-row gap-3">
                     <input type="url" id="urlInput" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                         class="flex-1 px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-base bg-white shadow-sm"
-                        value="" aria-label="YouTube or Vimeo video URL">
+                        value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube or Vimeo video URL">
                     <button id="getThumbBtn"
                         class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-lg tracking-wide flex items-center justify-center gap-2"
                         aria-label="Get thumbnails">
@@ -826,7 +826,7 @@
 
             // Auto-load example on page load
             window.addEventListener('load', () => {
-                setTimeout(handleExtract, 100);
+                // setTimeout(handleExtract, 100);
             });
 
             // ----- FAQ Toggle Function -----
