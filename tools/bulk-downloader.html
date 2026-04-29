@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulk YouTube Thumbnail Downloader – Download Multiple Thumbnails Free</title>
+<meta name="description" content="Download thumbnails from multiple YouTube videos at once. Paste up to 10 URLs and get all thumbnails in HD quality. Free bulk downloader, no signup.">
+<meta name="keywords" content="bulk youtube thumbnail downloader, download multiple youtube thumbnails, batch youtube thumbnail download, youtube thumbnail bulk download">
+<meta name="author" content="YouTube Thumbnail Downloader">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#DB4437">
+<link rel="canonical" href="https://www.youtube-thumbnail-downloader.cc/tools/bulk-downloader.html">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.svg">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Bulk YouTube Thumbnail Downloader – Download Multiple Thumbnails Free">
+<meta property="og:description" content="Download thumbnails from multiple YouTube videos at once. Paste up to 10 URLs and get all thumbnails in HD quality instantly. Free bulk YouTube thumbnail downloader, no signup.">
+<meta property="og:url" content="https://www.youtube-thumbnail-downloader.cc/tools/bulk-downloader.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YouTube Thumbnail Downloader – Free HD Download Tool">
+<meta property="og:site_name" content="YouTube Thumbnail Downloader">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bulk YouTube Thumbnail Downloader – Download Multiple Thumbnails Free">
+<meta name="twitter:description" content="Download thumbnails from multiple YouTube videos at once. Paste up to 10 URLs and get all thumbnails in HD quality instantly. Free bulk YouTube thumbnail downloader, no signup.">
+<meta name="twitter:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta name="twitter:site" content="@ytthumbdownload">
+<meta name="twitter:creator" content="@ytthumbdownload">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Bulk YouTube Thumbnail Downloader","url":"https://www.youtube-thumbnail-downloader.cc/tools/bulk-downloader.html","description":"Download YouTube thumbnails from multiple videos at once, in bulk.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../tools.html">Tools</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a><a href="../tools.html">Tools</a>
+    <a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tools.html">Tools</a> › Bulk Downloader</div>
+    <h1>Bulk Thumbnail <span class="text-red">Downloader</span></h1>
+    <p>Download thumbnails from multiple YouTube videos at once. Paste up to 10 URLs and get all thumbnails in one go.</p>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container">
+    <div class="tool-card">
+      <div class="quality-label">Enter one YouTube URL per line (up to 10 videos)</div>
+      <textarea id="bulk-urls" class="url-input" style="width:100%;height:180px;resize:vertical;margin-bottom:16px" placeholder="https://youtube.com/watch?v=video1&#10;https://youtube.com/watch?v=video2&#10;https://youtu.be/video3&#10;..."></textarea>
+      <div class="d-flex gap-12 flex-wrap">
+        <button class="btn btn-primary" onclick="startBulk()">⬇ Download All Thumbnails</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('bulk-urls').value=''">🗑️ Clear</button>
+      </div>
+      <div id="bulk-loader" style="display:none" class="loader"><div class="loader-spinner"></div><p>Processing URLs...</p></div>
+      <div id="bulk-results" style="margin-top:24px"></div>
+    </div>
+
+    <div class="content-block mt-40">
+      <h2>How to Use the Bulk Thumbnail Downloader</h2>
+      <ol>
+        <li>Paste your YouTube URLs into the text area above — one URL per line.</li>
+        <li>You can enter up to 10 YouTube video URLs at once.</li>
+        <li>Click "Download All Thumbnails" to process all URLs simultaneously.</li>
+        <li>Each video's thumbnails will appear with download buttons for each quality.</li>
+      </ol>
+      <h2>Who Uses Bulk Downloading?</h2>
+      <p>Content researchers studying multiple creator thumbnails at once, marketers compiling competitive visual research, educators building course materials with multiple video references, and bloggers collecting thumbnails for articles covering multiple YouTube videos.</p>
+    </div>
+  </div>
+</section>
+<script>
+async function startBulk() {
+  const textarea = document.getElementById("bulk-urls");
+  const lines = textarea.value.split("\n").map(l => l.trim()).filter(Boolean).slice(0, 10);
+  if (!lines.length) { alert("Please enter at least one YouTube URL."); return; }
+  const loader = document.getElementById("bulk-loader");
+  const results = document.getElementById("bulk-results");
+  loader.style.display = "block"; results.innerHTML = "";
+  function extractId(url) {
+    const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
+    return m ? m[1] : null;
+  }
+  for (const url of lines) {
+    const id = extractId(url);
+    if (!id) {
+      results.innerHTML += "<div class='error-msg' style='display:block;margin-bottom:12px'>❌ Invalid URL: " + url + "</div>";
+      continue;
+    }
+    const div = document.createElement("div");
+    div.style.cssText = "background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:20px;margin-bottom:16px";
+    div.innerHTML = "<p style='color:var(--text4);font-size:0.82rem;margin-bottom:12px'>Video ID: " + id + "</p><div style='display:flex;gap:12px;flex-wrap:wrap'>" +
+      ["maxresdefault","sddefault","hqdefault","mqdefault"].map(q =>
+        "<a href='https://img.youtube.com/vi/" + id + "/" + q + ".jpg' target='_blank' download='thumb-" + id + "-" + q + ".jpg' class='btn btn-secondary btn-sm'>⬇ " + q.replace("default","").toUpperCase() + "</a>"
+      ).join("") + "</div>";
+    results.appendChild(div);
+  }
+  loader.style.display = "none";
+}
+</script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a><p>Free YouTube thumbnail downloader. No signup required.</p></div>
+      <div class="footer-links"><h4>Tools</h4><ul><li><a href="../tools.html">All Tools</a></li><li><a href="thumbnail-downloader.html">Thumbnail Downloader</a></li><li><a href="bulk-downloader.html">Bulk Downloader</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-links"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../dmca.html">DMCA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 YouTube-Thumbnail-Downloader.cc — All Rights Reserved</p><p>Not affiliated with YouTube or Google Inc.</p></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body></html>

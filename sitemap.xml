@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://youtube-thumbnail-downloader.cc/</loc>
-  <lastmod>2026-02-23T04:04:23+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <!-- Core Pages -->
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/how-it-works.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/tools.html</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog.html</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/faq.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/about.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/contact.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- Tool Pages -->
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-downloader.html</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/tools/bulk-downloader.html</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-preview.html</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <!-- Blog Posts -->
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/perfect-youtube-thumbnail.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/youtube-thumbnail-size.html</loc><lastmod>2025-01-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/thumbnail-ctr-tips.html</loc><lastmod>2025-01-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/how-to-download-thumbnail.html</loc><lastmod>2024-12-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/youtube-thumbnail-ideas.html</loc><lastmod>2024-12-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/thumbnail-fonts.html</loc><lastmod>2024-12-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/blog/thumbnail-colors.html</loc><lastmod>2024-12-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Legal -->
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/privacy-policy.html</loc><lastmod>2025-01-01</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/terms-of-service.html</loc><lastmod>2025-01-01</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/disclaimer.html</loc><lastmod>2025-01-01</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/dmca.html</loc><lastmod>2025-01-01</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.youtube-thumbnail-downloader.cc/sitemap-page.html</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>

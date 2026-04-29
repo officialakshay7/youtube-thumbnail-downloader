@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free YouTube Tools – Thumbnail Downloader, Preview & More</title>
+<meta name="description" content="All our free YouTube tools: thumbnail downloader, bulk downloader, preview tool and more. 100% free, no account required, works on all devices.">
+<meta name="keywords" content="free youtube tools, youtube thumbnail tools, bulk youtube thumbnail downloader, youtube thumbnail preview, youtube tools free">
+<meta name="author" content="YouTube Thumbnail Downloader">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#DB4437">
+<link rel="canonical" href="https://www.youtube-thumbnail-downloader.cc/tools.html">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.svg">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Free YouTube Tools – Thumbnail Downloader, Preview & More">
+<meta property="og:description" content="All our free YouTube tools in one place: thumbnail downloader, bulk thumbnail downloader, thumbnail preview tool, and more. 100% free, no account required, works on all devices.">
+<meta property="og:url" content="https://www.youtube-thumbnail-downloader.cc/tools.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YouTube Thumbnail Downloader – Free HD Download Tool">
+<meta property="og:site_name" content="YouTube Thumbnail Downloader">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free YouTube Tools – Thumbnail Downloader, Preview & More">
+<meta name="twitter:description" content="All our free YouTube tools in one place: thumbnail downloader, bulk thumbnail downloader, thumbnail preview tool, and more. 100% free, no account required, works on all devices.">
+<meta name="twitter:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta name="twitter:site" content="@ytthumbdownload">
+<meta name="twitter:creator" content="@ytthumbdownload">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Free YouTube Tools","url":"https://www.youtube-thumbnail-downloader.cc/tools.html","description":"Collection of free tools for downloading and previewing YouTube thumbnails.","hasPart":[{"@type":"WebApplication","name":"YouTube Thumbnail Downloader","url":"https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-downloader.html"},{"@type":"WebApplication","name":"Bulk Thumbnail Downloader","url":"https://www.youtube-thumbnail-downloader.cc/tools/bulk-downloader.html"},{"@type":"WebApplication","name":"Thumbnail Preview Tool","url":"https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-preview.html"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="tools.html">Tools</a><a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Tools</div>
+    <h1>Free YouTube <span class="text-red">Tools</span></h1>
+    <p>All our tools are 100% free, no account required, and work on every device. Built for creators, marketers, and anyone who loves YouTube.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Featured Tool</span>
+      <h2>YouTube Thumbnail Downloader</h2>
+      <p>Our flagship tool. Download any YouTube video thumbnail in up to 5 different quality options instantly.</p>
+    </div>
+    
+    <div class="tool-card" style="margin-bottom:64px" id="tool">
+      <form id="thumb-form">
+        <div class="url-input-group">
+          <input type="text" id="url-input" class="url-input" placeholder="Paste YouTube URL — e.g. https://youtube.com/watch?v=..." autocomplete="off">
+          <button type="submit" class="btn btn-primary">⬇ Download</button>
+        </div>
+      </form>
+      <div id="loader" class="loader"><div class="loader-spinner"></div><p>Fetching thumbnails...</p></div>
+      <div id="error-msg" class="error-msg"></div>
+      <div id="result-area">
+        <div class="d-flex align-center gap-12 mb-16 flex-wrap" style="justify-content:space-between">
+          <p style="color:var(--text4);font-size:0.88rem">✅ Found! Choose your resolution:</p>
+          <button class="btn btn-secondary btn-sm" id="download-all">⬇ Download All</button>
+        </div>
+        <div id="preview-grid" class="thumbnail-preview"></div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="tag-line">More Tools</span>
+      <h2>Other Useful Tools</h2>
+    </div>
+    <div class="tool-grid">
+      <a href="tools/thumbnail-downloader.html" class="tool-mini-card">
+        <div class="icon">🖼️</div>
+        <h3>Single Thumbnail Downloader</h3>
+        <p>Download the thumbnail for any single YouTube video in all available resolutions.</p>
+        <span class="badge badge-success">✅ Free</span>
+      </a>
+      <a href="tools/bulk-downloader.html" class="tool-mini-card">
+        <div class="icon">📦</div>
+        <h3>Bulk Thumbnail Downloader</h3>
+        <p>Download thumbnails from multiple YouTube videos at once. Perfect for research and batch work.</p>
+        <span class="badge badge-success">✅ Free</span>
+      </a>
+      <a href="tools/thumbnail-preview.html" class="tool-mini-card">
+        <div class="icon">👁️</div>
+        <h3>Thumbnail Preview Tool</h3>
+        <p>Preview how your thumbnail looks in YouTube's search results, sidebar, and mobile feed.</p>
+        <span class="badge badge-success">✅ Free</span>
+      </a>
+      <div class="tool-mini-card" style="opacity:0.6">
+        <div class="icon">🎨</div>
+        <h3>Thumbnail Maker</h3>
+        <p>Create custom YouTube thumbnails with our easy drag-and-drop editor. Coming soon.</p>
+        <span class="badge badge-info">🔜 Coming Soon</span>
+      </div>
+      <div class="tool-mini-card" style="opacity:0.6">
+        <div class="icon">📊</div>
+        <h3>CTR Analyzer</h3>
+        <p>Analyze thumbnail click-through rates and get AI-powered suggestions to improve performance.</p>
+        <span class="badge badge-info">🔜 Coming Soon</span>
+      </div>
+      <div class="tool-mini-card" style="opacity:0.6">
+        <div class="icon">🔍</div>
+        <h3>Competitor Research</h3>
+        <p>Study top thumbnails in any YouTube niche to discover what's working best right now.</p>
+        <span class="badge badge-info">🔜 Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="logo" href="index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a><p>The fastest, free YouTube thumbnail downloader. No signup, no limits.</p></div>
+      <div class="footer-links"><h4>Tools</h4><ul><li><a href="tools.html">All Tools</a></li><li><a href="tools/thumbnail-downloader.html">Thumbnail Downloader</a></li><li><a href="tools/bulk-downloader.html">Bulk Downloader</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-links"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="dmca.html">DMCA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 YouTube-Thumbnail-Downloader.cc — All Rights Reserved</p><p>Not affiliated with YouTube or Google Inc.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

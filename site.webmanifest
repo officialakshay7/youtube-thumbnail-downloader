@@ -1,0 +1,14 @@
+{
+  "name": "YouTube Thumbnail Downloader",
+  "short_name": "YTThumb",
+  "description": "Free YouTube thumbnail downloader — HD quality, no signup.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#DB4437",
+  "orientation": "any",
+  "icons": [
+    {"src": "/images/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"},
+    {"src": "/images/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}

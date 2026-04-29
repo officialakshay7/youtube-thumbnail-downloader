@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Thumbnail Downloader – Download HD Thumbnails Free</title>
+<meta name="description" content="Free YouTube thumbnail downloader. Paste any URL and download the thumbnail in Max HD (1280×720), SD, HQ or MQ quality. No signup, no limits.">
+<meta name="keywords" content="youtube thumbnail downloader, download youtube thumbnail hd, youtube thumbnail download tool free, youtube thumbnail downloader online">
+<meta name="author" content="YouTube Thumbnail Downloader">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#DB4437">
+<link rel="canonical" href="https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-downloader.html">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.svg">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="YouTube Thumbnail Downloader – Download HD Thumbnails Free">
+<meta property="og:description" content="Free YouTube thumbnail downloader tool. Paste any YouTube URL and instantly download the thumbnail in Max HD (1280x720), SD, HQ, MQ quality. No signup, no limits.">
+<meta property="og:url" content="https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-downloader.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YouTube Thumbnail Downloader – Free HD Download Tool">
+<meta property="og:site_name" content="YouTube Thumbnail Downloader">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Thumbnail Downloader – Download HD Thumbnails Free">
+<meta name="twitter:description" content="Free YouTube thumbnail downloader tool. Paste any YouTube URL and instantly download the thumbnail in Max HD (1280x720), SD, HQ, MQ quality. No signup, no limits.">
+<meta name="twitter:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta name="twitter:site" content="@ytthumbdownload">
+<meta name="twitter:creator" content="@ytthumbdownload">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"YouTube Thumbnail Downloader","url":"https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-downloader.html","description":"Free online tool to download YouTube video thumbnails in HD, SD and other quality options.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../tools.html">Tools</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a><a href="../tools.html">Tools</a>
+    <a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tools.html">Tools</a> › Thumbnail Downloader</div>
+    <h1>YouTube Thumbnail <span class="text-red">Downloader</span></h1>
+    <p>Download any YouTube video thumbnail in multiple resolutions instantly. 100% free, no account required.</p>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container">
+    <div class="tool-card" id="tool">
+      <form id="thumb-form">
+        <div class="url-input-group">
+          <input type="text" id="url-input" class="url-input" placeholder="Paste YouTube video URL here..." autocomplete="off">
+          <button type="submit" class="btn btn-primary">⬇ Download</button>
+        </div>
+      </form>
+      <div id="loader" class="loader"><div class="loader-spinner"></div><p>Fetching thumbnails...</p></div>
+      <div id="error-msg" class="error-msg"></div>
+      <div id="result-area">
+        <div class="d-flex align-center gap-12 mb-16 flex-wrap" style="justify-content:space-between">
+          <p style="color:var(--text4);font-size:0.88rem">✅ All available resolutions:</p>
+          <button class="btn btn-secondary btn-sm" id="download-all">⬇ Download All</button>
+        </div>
+        <div id="preview-grid" class="thumbnail-preview"></div>
+      </div>
+    </div>
+
+    <div class="section-header mt-40">
+      <span class="tag-line">Features</span>
+      <h2>Why Use Our Thumbnail Downloader?</h2>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card"><div class="feature-icon">🖼️</div><h3>All Resolutions</h3><p>Instantly fetch all available thumbnail sizes for any YouTube video — from 120×90 up to 1280×720 Full HD.</p></div>
+      <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Results</h3><p>No processing time, no queue. Thumbnails appear within 1–2 seconds of clicking Download.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔒</div><h3>No Login Needed</h3><p>We don't require your email, Google account, or any personal information. Just paste and download.</p></div>
+    </div>
+
+    <div class="content-block mt-40">
+      <h2>How to Use the YouTube Thumbnail Downloader</h2>
+      <ol>
+        <li>Find the YouTube video you want the thumbnail from.</li>
+        <li>Copy its URL from the address bar or use the Share button.</li>
+        <li>Paste the URL into the box above and click "Download".</li>
+        <li>All available resolutions will load. Click the Download button next to your preferred size.</li>
+        <li>The image saves to your Downloads folder (or you can right-click → Save Image As on mobile).</li>
+      </ol>
+      <h2>Supported URL Formats</h2>
+      <p>Our tool accepts all standard YouTube URL formats: watch URLs (youtube.com/watch?v=...), short URLs (youtu.be/...), Shorts URLs (youtube.com/shorts/...), and embedded URLs (youtube.com/embed/...).</p>
+      <h2>What Resolutions Are Available?</h2>
+      <p>YouTube stores thumbnails at up to five resolutions. We check all of them and display only the ones that actually exist for your specific video. Not all videos have all resolutions — older videos and Shorts may have fewer options available.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a><p>Free YouTube thumbnail downloader. No signup required.</p></div>
+      <div class="footer-links"><h4>Tools</h4><ul><li><a href="../tools.html">All Tools</a></li><li><a href="thumbnail-downloader.html">Thumbnail Downloader</a></li><li><a href="bulk-downloader.html">Bulk Downloader</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-links"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../dmca.html">DMCA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 YouTube-Thumbnail-Downloader.cc — All Rights Reserved</p><p>Not affiliated with YouTube or Google Inc.</p></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body></html>

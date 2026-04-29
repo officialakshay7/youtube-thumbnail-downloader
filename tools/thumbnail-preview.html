@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Thumbnail Preview Tool – See How Thumbnails Look</title>
+<meta name="description" content="Preview any YouTube thumbnail in search results, suggested videos, and mobile feed sizes. Free thumbnail mockup and checker tool, no signup required.">
+<meta name="keywords" content="youtube thumbnail preview tool, thumbnail mockup youtube, see youtube thumbnail in search results, youtube thumbnail checker">
+<meta name="author" content="YouTube Thumbnail Downloader">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#DB4437">
+<link rel="canonical" href="https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-preview.html">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.svg">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="YouTube Thumbnail Preview Tool – See How Thumbnails Look">
+<meta property="og:description" content="Preview any YouTube thumbnail in search results, suggested videos, and mobile feed sizes before publishing. Free thumbnail mockup and preview tool, no signup required.">
+<meta property="og:url" content="https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-preview.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YouTube Thumbnail Downloader – Free HD Download Tool">
+<meta property="og:site_name" content="YouTube Thumbnail Downloader">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Thumbnail Preview Tool – See How Thumbnails Look">
+<meta name="twitter:description" content="Preview any YouTube thumbnail in search results, suggested videos, and mobile feed sizes before publishing. Free thumbnail mockup and preview tool, no signup required.">
+<meta name="twitter:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta name="twitter:site" content="@ytthumbdownload">
+<meta name="twitter:creator" content="@ytthumbdownload">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"YouTube Thumbnail Preview Tool","url":"https://www.youtube-thumbnail-downloader.cc/tools/thumbnail-preview.html","description":"Preview how a YouTube thumbnail looks in search results, sidebars, and mobile view.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../tools.html">Tools</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a><a href="../tools.html">Tools</a>
+    <a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../tools.html">Tools</a> › Thumbnail Preview</div>
+    <h1>Thumbnail <span class="text-red">Preview Tool</span></h1>
+    <p>See exactly how any YouTube thumbnail looks in search results, the homepage, and mobile views — before publishing.</p>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="container">
+    <div class="tool-card mb-40">
+      <div class="quality-label">Paste a YouTube URL to preview its thumbnail in different contexts</div>
+      <div class="url-input-group" style="margin-top:8px">
+        <input type="text" id="preview-url" class="url-input" placeholder="https://youtube.com/watch?v=..." autocomplete="off">
+        <button class="btn btn-primary" onclick="loadPreview()">👁️ Preview</button>
+      </div>
+      <div id="preview-area" style="display:none;margin-top:28px">
+        <h3 style="margin-bottom:20px;font-size:1rem;color:var(--text4)">Thumbnail in different YouTube contexts:</h3>
+        <div class="grid-3">
+          <div style="background:var(--bg3);border-radius:10px;padding:16px">
+            <p style="font-size:0.78rem;color:var(--text4);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px">Search Results</p>
+            <img id="prev-search" style="width:246px;max-width:100%;border-radius:6px;display:block" alt="Search preview">
+            <p style="font-size:0.72rem;color:var(--text4);margin-top:8px">~246×138px</p>
+          </div>
+          <div style="background:var(--bg3);border-radius:10px;padding:16px">
+            <p style="font-size:0.78rem;color:var(--text4);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px">Suggested Videos</p>
+            <img id="prev-suggested" style="width:168px;max-width:100%;border-radius:6px;display:block" alt="Suggested preview">
+            <p style="font-size:0.72rem;color:var(--text4);margin-top:8px">~168×94px</p>
+          </div>
+          <div style="background:var(--bg3);border-radius:10px;padding:16px">
+            <p style="font-size:0.78rem;color:var(--text4);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px">Mobile Feed</p>
+            <img id="prev-mobile" style="width:120px;max-width:100%;border-radius:6px;display:block" alt="Mobile preview">
+            <p style="font-size:0.72rem;color:var(--text4);margin-top:8px">~120×67px</p>
+          </div>
+        </div>
+        <div class="mt-24">
+          <button id="dl-preview-btn" class="btn btn-primary btn-sm">⬇ Download Full Size</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>Why Preview Your Thumbnail?</h2>
+      <p>A thumbnail that looks great at full size can look terrible at the 120-pixel width used in YouTube's mobile suggestions. Our preview tool shows you how your thumbnail will appear across three key display sizes so you can make adjustments before publishing — not after.</p>
+      <h2>Common Issues This Tool Reveals</h2>
+      <ul>
+        <li><strong>Text too small:</strong> Visible at full size but completely illegible at sidebar sizes</li>
+        <li><strong>Face too far back:</strong> Person becomes unrecognizable when thumbnail shrinks</li>
+        <li><strong>Too many elements:</strong> Complex compositions look cluttered at small sizes</li>
+        <li><strong>Low contrast:</strong> Colors that seemed fine on a bright monitor disappear on mobile screens</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<script>
+function loadPreview() {
+  const url = document.getElementById("preview-url").value.trim();
+  const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/);
+  if (!m) { alert("Please enter a valid YouTube URL."); return; }
+  const id = m[1];
+  const src = "https://img.youtube.com/vi/" + id + "/hqdefault.jpg";
+  ["prev-search","prev-suggested","prev-mobile"].forEach(i => {
+    document.getElementById(i).src = src;
+  });
+  document.getElementById("dl-preview-btn").onclick = () => {
+    const a = document.createElement("a");
+    a.href = "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
+    a.download = "thumbnail-" + id + ".jpg";
+    a.target = "_blank"; a.click();
+  };
+  document.getElementById("preview-area").style.display = "block";
+}
+</script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="logo" href="../index.html"><div class="logo-icon">▶</div>YT<span>Thumb</span></a><p>Free YouTube thumbnail downloader. No signup required.</p></div>
+      <div class="footer-links"><h4>Tools</h4><ul><li><a href="../tools.html">All Tools</a></li><li><a href="thumbnail-downloader.html">Thumbnail Downloader</a></li><li><a href="bulk-downloader.html">Bulk Downloader</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-links"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../dmca.html">DMCA</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 YouTube-Thumbnail-Downloader.cc — All Rights Reserved</p><p>Not affiliated with YouTube or Google Inc.</p></div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body></html>

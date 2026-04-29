@@ -1,594 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EZ91PM4BQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-8EZ91PM4BQ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly</title>
-    <meta name="title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
-    <meta name="description" content="Download YouTube and Vimeo video thumbnails in HD, medium, and standard 
-quality. Free, no registration, works on any device. Paste a URL and save instantly.">
-    <meta name="keywords"
-        content="youtube thumbnail download, video thumbnail downloader, thumbnail extractor, download youtube thumbnails, vimeo thumbnail download, youtube thumbnail saver, hd thumbnail download, maxresdefault">
-    <meta name="author" content="Thumbnaildownloader">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://youtube-thumbnail-downloader.cc">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://youtube-thumbnail-downloader.cc">
-    <meta property="og:title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
-    <meta property="og:description"
-        content="Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities: HD, SD, and default. No registration required.">
-    <meta property="og:image" content="https://youtube-thumbnail-downloader.cc/og-image.jpg">
-    <meta property="og:site_name" content="YouTube Thumbnail Downloader">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://youtube-thumbnail-downloader.cc">
-    <meta property="twitter:title" content="YouTube Thumbnail Downloader - Download HD Video Thumbnails Instantly">
-    <meta property="twitter:description"
-        content="Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities: HD, SD, and default.">
-    <meta property="twitter:image" content="https://youtube-thumbnail-downloader.cc/twitter-image.jpg">
-
-    <!-- Additional SEO Meta -->
-    <meta name="geo.region" content="US">
-    <meta name="geo.placename" content="United States">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#3b82f6">
-
-    <!-- Favicon (using Font Awesome as fallback) -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%233b82f6'>📸</text></svg>">
-
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="tailwind/output.css">
-
-    <!-- Font Awesome for icons -->
-    <link rel="preload" href="assets/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="assets/all.min.css">
-    </noscript>
-
-    <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Thumbnail Downloader – Free HD Thumbnail Download</title>
+<meta name="description" content="Download YouTube thumbnails in HD and Full HD for free. No signup required. Works with all videos, Shorts and playlists. Fast, simple, 100% free forever.">
+<meta name="keywords" content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail download, yt thumbnail downloader, youtube thumbnail grabber, youtube thumbnail extractor, free thumbnail downloader">
+<meta name="author" content="YouTube Thumbnail Downloader">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#DB4437">
+<link rel="canonical" href="https://www.youtube-thumbnail-downloader.cc/">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.svg">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="YouTube Thumbnail Downloader – Free HD Thumbnail Download">
+<meta property="og:description" content="Download YouTube thumbnails in HD and Full HD quality for free. No signup required. Works with all YouTube videos, Shorts, and playlists. Fast, simple, 100% free.">
+<meta property="og:url" content="https://www.youtube-thumbnail-downloader.cc/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YouTube Thumbnail Downloader – Free HD Download Tool">
+<meta property="og:site_name" content="YouTube Thumbnail Downloader">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Thumbnail Downloader – Free HD Thumbnail Download">
+<meta name="twitter:description" content="Download YouTube thumbnails in HD and Full HD quality for free. No signup required. Works with all YouTube videos, Shorts, and playlists. Fast, simple, 100% free.">
+<meta name="twitter:image" content="https://www.youtube-thumbnail-downloader.cc/images/og-image.jpg">
+<meta name="twitter:site" content="@ytthumbdownload">
+<meta name="twitter:creator" content="@ytthumbdownload">
+<script type="application/ld+json">
+[
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"YouTube Thumbnail Downloader",
+    "url":"https://www.youtube-thumbnail-downloader.cc/",
+    "description":"Free online tool to download YouTube video thumbnails in HD quality. Supports all video types including Shorts.",
+    "applicationCategory":"UtilitiesApplication",
+    "operatingSystem":"Any",
+    "browserRequirements":"Requires JavaScript",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "creator":{"@type":"Organization","name":"YouTube Thumbnail Downloader","url":"https://www.youtube-thumbnail-downloader.cc/"}
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"YouTube Thumbnail Downloader",
+    "url":"https://www.youtube-thumbnail-downloader.cc/",
+    "logo":"https://www.youtube-thumbnail-downloader.cc/images/favicon.svg",
+    "sameAs":[]
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"YouTube Thumbnail Downloader",
+    "url":"https://www.youtube-thumbnail-downloader.cc/",
+    "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.youtube-thumbnail-downloader.cc/?q={search_term_string}"},"query-input":"required name=search_term_string"}
+  }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="bg-gray-50 font-sans antialiased">
+<!-- HEADER -->
+<header>
+  <nav>
+    <a class="logo" href="index.html">
+      <div class="logo-icon">▶</div>
+      YT<span>Thumb</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="tools.html">Tools</a>
+    <a href="blog.html">Blog</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
 
-    <!-- Schema.org JSON-LD for Organization -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "YouTube Thumbnail Downloader",
-        "url": "https://youtube-thumbnail-downloader.cc",
-        "description": "Free YouTube and Vimeo thumbnail downloader. Extract and download thumbnails in all qualities including HD, SD, and default sizes.",
-        "applicationCategory": "Multimedia",
-        "operatingSystem": "All",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "featureList": [
-            "Download YouTube thumbnails",
-            "Download Vimeo thumbnails",
-            "Multiple quality options",
-            "HD thumbnails up to 1280x720",
-            "No registration required"
-        ],
-        "author": {
-            "@type": "Organization",
-            "name": "Thumbnaildownloader",
-            "url": "https://youtube-thumbnail-downloader.cc"
-        }
-    }
-    </script>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">🎉 100% Free &bull; No Signup &bull; Unlimited Downloads</div>
+      <h1>Download Any YouTube<br><span class="highlight">Thumbnail in HD</span></h1>
+      <p>Paste any YouTube video URL and instantly grab its thumbnail in multiple resolutions — from Full HD to standard quality. Works with regular videos, Shorts, and playlists.</p>
 
-    <!-- Schema.org JSON-LD for FAQ Page -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is this YouTube Thumbnail Downloader really free?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, our YouTube Thumbnail Downloader is completely free to use. No registration, no credit card, no hidden fees. You can download unlimited thumbnails from any public YouTube or Vimeo video."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What video platforms do you support?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Currently we support YouTube and Vimeo. For YouTube, we provide all available qualities including maxresdefault (HD), hqdefault, mqdefault, and sddefault. For Vimeo, we provide the highest available quality thumbnail."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What thumbnail qualities can I download?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "For YouTube videos, you can download: MaxRes (HD) - 1280x720 pixels, High Quality - 480x360 pixels, Medium Quality - 320x180 pixels, and Standard Quality - 640x480 pixels. The availability depends on the video uploader's settings."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need to install any software?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No installation needed! Our YouTube Thumbnail Downloader is a web-based tool that works directly in your browser on any device including desktop, tablet, and mobile. Just paste the URL and download."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I use these thumbnails commercially?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Please check the copyright and usage rights of the original video. The thumbnails are generated from publicly available videos. We recommend using thumbnails only for personal use or with proper attribution when required."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How do I download a YouTube thumbnail?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Simply paste the YouTube video URL in the input field above, click 'Get Thumbnails', and then click on any thumbnail card or the download button to save the image to your device. It's that simple!"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Why can't I see all thumbnail qualities for some videos?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Some YouTube videos may not have all thumbnail qualities available. This depends on the video upload date and settings. The MaxRes (HD) quality is only available for videos uploaded after 2009 and if the uploader hasn't disabled it."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- Schema.org JSON-LD for Breadcrumbs -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://youtube-thumbnail-downloader.cc"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "YouTube Thumbnail Download",
-                "item": "https://youtube-thumbnail-downloader.cc#how-to-use"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "FAQ",
-                "item": "https://youtube-thumbnail-downloader.cc#faq"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Schema.org JSON-LD for WebSite -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "YouTube Thumbnail Downloader",
-        "url": "https://youtube-thumbnail-downloader.cc",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://youtube-thumbnail-downloader.cc/?search={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "description": "Free online tool to download YouTube and Vimeo video thumbnails in all available qualities."
-    }
-    </script>
-
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <!-- Logo and Brand -->
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center space-x-2" aria-label="YouTube Thumbnail Downloader Home">
-                        <i class="fas fa-download text-blue-600 text-2xl" aria-hidden="true"></i>
-                        <span class="font-bold text-xl text-gray-800">Thumbnail<span
-                                class="text-blue-600">downloader</span></span>
-                    </a>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
-                        aria-label="Home">Home</a>
-                    <a href="#how-to-use" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
-                        aria-label="How to Use">How to Use</a>
-                    <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
-                        aria-label="Features">Features</a>
-                    <a href="#faq" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
-                        aria-label="FAQ">FAQ</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition font-medium"
-                        aria-label="Contact">Contact</a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none"
-                        aria-label="Toggle mobile menu" aria-expanded="false">
-                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
+      <!-- MAIN TOOL -->
+      <div class="tool-card" id="tool">
+        <form id="thumb-form">
+          <div class="url-input-group">
+            <input type="text" id="url-input" class="url-input" placeholder="Paste YouTube URL here — e.g. https://youtube.com/watch?v=..." autocomplete="off" spellcheck="false">
+            <button type="submit" class="btn btn-primary">
+              ⬇ Download
+            </button>
+          </div>
+        </form>
+        <div id="loader" class="loader">
+          <div class="loader-spinner"></div>
+          <p>Fetching thumbnails...</p>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3"
-            aria-label="Mobile navigation">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Home</a>
-            <a href="#how-to-use" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">How to
-                Use</a>
-            <a href="#features" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Features</a>
-            <a href="#faq" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">FAQ</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+        <div id="error-msg" class="error-msg"></div>
+        <div id="result-area">
+          <div class="d-flex align-center justify-center gap-12 mb-16 flex-wrap" style="justify-content:space-between">
+            <p style="color:var(--text4);font-size:0.88rem">✅ Thumbnails found! Choose your quality:</p>
+            <button class="btn btn-secondary btn-sm" id="download-all">⬇ Download All</button>
+          </div>
+          <div id="preview-grid" class="thumbnail-preview"></div>
         </div>
-    </nav>
+      </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div class="d-flex gap-16 justify-center flex-wrap mt-24" style="font-size:0.85rem;color:var(--text3)">
+        <span>✅ No registration</span>
+        <span>✅ Unlimited use</span>
+        <span>✅ All resolutions</span>
+        <span>✅ Works on mobile</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Home Section -->
-        <section id="home" class="scroll-mt-16">
-            <!-- Hero Section with Title -->
-            <div class="text-center mb-8">
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-                    Free YouTube Thumbnail Downloader - Download YouTube Video Thumbnails Instantly
-                </h1>
+<!-- STATS -->
+<div class="stats-bar section-sm">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">10M+</span>
+        <span class="stat-label">Thumbnails Downloaded</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">5</span>
+        <span class="stat-label">Quality Options</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Cost to Use</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Uptime & Reliability</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Paste any YouTube or Vimeo video URL to instantly extract and download its thumbnail.
-                    Choose from multiple resolutions including HD (1280x720), high quality, medium, and
-                    standard — no registration, no software, completely free.
-                </p>
-            </div>
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Why Choose Us</span>
+      <h2>Everything You Need, Nothing You Don't</h2>
+      <p>We built the simplest, fastest YouTube thumbnail downloader on the web. No bloat, no ads, no hassle.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">🖼️</div>
+        <h3>All Quality Options</h3>
+        <p>Download in Max HD (1280×720), SD, HQ, MQ, and small sizes — whatever fits your use case perfectly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant Results</h3>
+        <p>Thumbnails load in under 2 seconds. No waiting, no queue, no limits. Just paste the URL and go.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Works perfectly on iPhone, Android, tablet, and desktop. Fully responsive design built for every screen.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>We don't store your URLs, track your activity, or collect personal data. Your searches stay private.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <h3>Completely Free</h3>
+        <p>No premium plans. No trial periods. No credit card. 100% free forever — that's our promise to you.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎬</div>
+        <h3>All Video Types</h3>
+        <p>Works with regular YouTube videos, Shorts, unlisted videos, and embedded videos from any channel.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- Main Input Card -->
-            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-12 border border-gray-100">
-                <label for="urlInput" class="block text-sm font-medium text-gray-700 mb-2">Video URL</label>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <input type="url" id="urlInput" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        class="flex-1 px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-base bg-white shadow-sm"
-                        value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" aria-label="YouTube or Vimeo video URL">
-                    <button id="getThumbBtn"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-lg tracking-wide flex items-center justify-center gap-2"
-                        aria-label="Get thumbnails">
-                        <i class="fas fa-search" aria-hidden="true"></i> Get Thumbnails
-                    </button>
-                </div>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="text-xs text-gray-500">Popular:</span>
-                    <button
-                        class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-gray-700 transition"
-                        onclick="setExampleUrl('youtube')" aria-label="Try YouTube example">YouTube Example</button>
-                    <button
-                        class="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-gray-700 transition"
-                        onclick="setExampleUrl('vimeo')" aria-label="Try Vimeo example">Vimeo Example</button>
-                </div>
-            </div>
+<!-- HOW IT WORKS -->
+<section class="section" style="background:var(--bg3)">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Simple Process</span>
+      <h2>Download a Thumbnail in 3 Steps</h2>
+      <p>No learning curve. No complicated steps. Anyone can use this tool in seconds.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Copy the YouTube URL</h3>
+        <p>Go to any YouTube video, copy the link from your browser's address bar or the share button below the video.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Paste & Click Download</h3>
+        <p>Paste the URL into the input box above and click the Download button. Our tool fetches all available quality options instantly.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Save Your Image</h3>
+        <p>Choose your preferred resolution and click Download. The thumbnail saves directly to your device — done!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <!-- Results Area -->
-            <div id="resultArea" class="mt-8 min-h-[300px]" aria-label="Thumbnail results"></div>
-        </section>
+<!-- USE CASES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Use Cases</span>
+      <h2>Who Uses This Tool?</h2>
+      <p>From creators to marketers to students — thousands of people rely on our tool every day.</p>
+    </div>
+    <div class="grid-4">
+      <div class="feature-card" style="text-align:center">
+        <div class="feature-icon" style="margin:0 auto 16px">🎥</div>
+        <h3 style="font-size:1rem">YouTubers</h3>
+        <p style="font-size:0.85rem">Study competitors' thumbnails for design inspiration and A/B testing ideas.</p>
+      </div>
+      <div class="feature-card" style="text-align:center">
+        <div class="feature-icon" style="margin:0 auto 16px">📢</div>
+        <h3 style="font-size:1rem">Marketers</h3>
+        <p style="font-size:0.85rem">Create rich link previews, social media posts, and promotional materials.</p>
+      </div>
+      <div class="feature-card" style="text-align:center">
+        <div class="feature-icon" style="margin:0 auto 16px">📝</div>
+        <h3 style="font-size:1rem">Bloggers</h3>
+        <p style="font-size:0.85rem">Embed YouTube thumbnail images in articles and blog posts for better engagement.</p>
+      </div>
+      <div class="feature-card" style="text-align:center">
+        <div class="feature-icon" style="margin:0 auto 16px">🎓</div>
+        <h3 style="font-size:1rem">Educators</h3>
+        <p style="font-size:0.85rem">Add video thumbnails to presentations, study materials, and course content.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- How to Use Section -->
-        <section id="how-to-use" class="scroll-mt-16 mt-20 py-12 bg-white rounded-2xl shadow-lg p-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How to Download <span class="text-blue-600">a
-                    Youtube Thumbnail</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-blue-600 text-2xl font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Paste Video URL</h3>
-                    <p class="text-gray-600">
-                        Copy the URL from any public YouTube or Vimeo video and paste it into the field above.
-                    </p>
+<!-- FAQ -->
+<section class="section" style="background:var(--bg3)">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto">
+      <div class="faq-item">
+        <button class="faq-q">Is this YouTube thumbnail downloader free? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes, absolutely free. There are no hidden costs, no premium tiers, and no signup required. You can download unlimited thumbnails at no charge, forever.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What quality thumbnails can I download? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>We offer all available qualities YouTube provides: Max HD (1280×720), SD (640×480), HQ (480×360), MQ (320×180), and the default small size (120×90). Not all videos have all resolutions available.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is it legal to download YouTube thumbnails? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Thumbnails are publicly accessible images. Downloading them for personal use, research, or reference is generally acceptable. However, you should not republish someone else's thumbnail commercially without permission. Always respect copyright and original creators.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does it work with YouTube Shorts? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes! Our tool works with regular YouTube videos, YouTube Shorts, unlisted videos, and most embedded YouTube content. Just paste any valid YouTube URL and it will work.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to install any software? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No installation required. This is a 100% web-based tool that runs entirely in your browser. It works on Windows, Mac, Linux, iOS, and Android — any device with a browser.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why is the thumbnail blurry or low resolution? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>The quality depends on what YouTube provides for that specific video. Older videos or Shorts may only have lower-resolution thumbnails available. We always show the highest quality available first.</p></div>
+      </div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="faq.html" class="btn btn-outline">See All FAQs →</a>
+    </div>
+  </div>
+</section>
 
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-blue-600 text-2xl font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Click Get Thumbnails</h3>
-                    <p class="text-gray-600">
-                        Hit "Get Thumbnails" and the tool will instantly fetch all available sizes for that video.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-blue-600 text-2xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Download or Click</h3>
-                    <p class="text-gray-600">
-                        Click the resolution you want. The image downloads directly to your device in one click.
-                    </p>
-                </div>
-            </div>
-        </section>
+<!-- BLOG PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag-line">Latest Tips</span>
+      <h2>From Our Blog</h2>
+      <p>Learn about YouTube thumbnail best practices, design tips, and creator strategies.</p>
+    </div>
+    <div class="grid-3">
+      <div class="blog-card">
+        <div class="blog-thumb">🖼️</div>
+        <div class="blog-body">
+          <span class="blog-tag">Design</span>
+          <h3><a href="blog/perfect-youtube-thumbnail.html">How to Create the Perfect YouTube Thumbnail in 2025</a></h3>
+          <p style="font-size:0.88rem">Learn the proven design principles behind high-click-through-rate thumbnails used by top creators.</p>
+          <div class="blog-meta"><span>📅 Jan 15, 2025</span><span>⏱ 8 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb">📐</div>
+        <div class="blog-body">
+          <span class="blog-tag">Tips</span>
+          <h3><a href="blog/youtube-thumbnail-size.html">YouTube Thumbnail Size: The Complete 2025 Guide</a></h3>
+          <p style="font-size:0.88rem">Everything you need to know about thumbnail dimensions, aspect ratios, and file size requirements.</p>
+          <div class="blog-meta"><span>📅 Jan 10, 2025</span><span>⏱ 6 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb">📊</div>
+        <div class="blog-body">
+          <span class="blog-tag">Strategy</span>
+          <h3><a href="blog/thumbnail-ctr-tips.html">10 Proven Tips to Boost Your Thumbnail Click-Through Rate</a></h3>
+          <p style="font-size:0.88rem">Increase your CTR with these data-backed thumbnail strategies used by million-subscriber channels.</p>
+          <div class="blog-meta"><span>📅 Jan 5, 2025</span><span>⏱ 10 min read</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="blog.html" class="btn btn-outline">Read All Articles →</a>
+    </div>
+  </div>
+</section>
 
-        <!-- Why Choose Us / Features Section -->
-        <section id="features" class="scroll-mt-16 mt-20 py-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose <span class="text-blue-600"> Our
-                    YouTube Thumbnail Downloader</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
-                    <i class="fas fa-bolt text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
-                    <p class="text-gray-600">
-                        Thumbnails are fetched and displayed in seconds — no processing delays or waiting screens.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
-                    <i class="fas fa-image text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-xl font-semibold mb-2">All Qualities</h3>
-                    <p class="text-gray-600">
-                        Get every available resolution for a video: HD (1280x720), standard (640x480), medium
-                        (320x180), and high quality (480x360).
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
-                    <i class="fas fa-download text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-xl font-semibold mb-2">One-Click Download</h3>
-                    <p class="text-gray-600">
-                        Click any thumbnail card to download it immediately. No redirects, no extra steps.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100">
-                    <i class="fas fa-shield-alt text-blue-600 text-3xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-xl font-semibold mb-2">100% Free</h3>
-                    <p class="text-gray-600">
-                        No account needed, no usage limits, no hidden fees. Works on desktop, tablet, and mobile.
-                    </p>
-                </div>
-            </div>
-        </section>
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Ready to Download Your First Thumbnail?</h2>
+      <p>Join millions of users who rely on our free tool to grab YouTube thumbnails in seconds. No signup, no limits.</p>
+      <a href="#tool" class="btn btn-primary" data-scroll="#tool">⬇ Start Downloading Free</a>
+    </div>
+  </div>
+</section>
 
-        <!-- Content Section -->
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <div class="logo-icon">▶</div>
+          YT<span>Thumb</span>
+        </a>
+        <p>The fastest, free YouTube thumbnail downloader. Grab any video's thumbnail in full HD quality with one click.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="tools.html">All Tools</a></li>
+          <li><a href="tools/thumbnail-downloader.html">Thumbnail Downloader</a></li>
+          <li><a href="tools/bulk-downloader.html">Bulk Downloader</a></li>
+          <li><a href="tools/thumbnail-preview.html">Thumbnail Preview</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="dmca.html">DMCA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 YouTube-Thumbnail-Downloader.cc — All Rights Reserved</p>
+      <p>Not affiliated with YouTube or Google Inc.</p>
+    </div>
+  </div>
+</footer>
 
-        <section class="mt-20 bg-white rounded-2xl shadow-lg p-8">
-
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                Built for Creators, Designers, and Marketers
-            </h2>
-
-            <p class="text-gray-600 mb-4">
-                Whether you're a content creator researching competitor thumbnails, a designer
-                looking for visual reference, or a marketer building a presentation — this tool
-                gives you fast access to any public YouTube or Vimeo video thumbnail.
-            </p>
-
-            <p class="text-gray-600 mb-4">
-                All processing happens in your browser. No files are uploaded to our servers,
-                and no account is required. Just paste a URL and download the image you need.
-            </p>
-
-            <p class="text-gray-600">
-                Need help getting started? See the <a href="#how-to-use">step-by-step guide</a> above.
-            </p>
-
-        </section>
-
-        <section class="mt-16 bg-white rounded-2xl shadow-lg p-8">
-
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                Available Thumbnail Resolutions
-            </h2>
-
-            <p class="text-gray-600 mb-4">
-                YouTube stores multiple thumbnail sizes for each video. This tool fetches all
-                available ones — availability varies by video age and uploader settings.
-            </p>
-
-            <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                <li><strong>MaxRes HD</strong> — 1280x720px (not available on all videos)</li>
-                <li><strong>High Quality</strong> — 480x360px</li>
-                <li><strong>Medium Quality</strong> — 320x180px</li>
-                <li><strong>Standard</strong> — 640x480px</li>
-            </ul>
-
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="scroll-mt-16 mt-20 py-12 bg-white rounded-2xl shadow-lg p-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked <span
-                    class="text-blue-600">Questions</span></h2>
-            <div class="space-y-4 max-w-3xl mx-auto">
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>Is this tool really free?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        Yes! Our YouTube Thumbnail Downloader is completely free to use. No registration, no credit
-                        card, no hidden fees. You can download unlimited thumbnails from any public YouTube or Vimeo
-                        video.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>What video platforms do you support?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        Currently we support YouTube and Vimeo. For YouTube, we provide all available qualities
-                        including maxresdefault (HD), hqdefault, mqdefault, and sddefault. For Vimeo, we provide the
-                        highest available quality thumbnail.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>What thumbnail qualities can I download?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        For YouTube videos, you can download: MaxRes (HD) - 1280x720 pixels, High Quality - 480x360
-                        pixels, Medium Quality - 320x180 pixels, and Standard Quality - 640x480 pixels. The availability
-                        depends on the video uploader's settings.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>Do I need to install any software?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        No installation needed! Our YouTube Thumbnail Downloader is a web-based tool that works directly
-                        in your browser on any device including desktop, tablet, and mobile. Just paste the URL and
-                        download.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>Can I use these thumbnails commercially?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        Please check the copyright and usage rights of the original video. The thumbnails are generated
-                        from publicly available videos. We recommend using thumbnails only for personal use or with
-                        proper attribution when required.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>How do I download a YouTube thumbnail?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        Paste the video URL into the input field, click "Get Thumbnails", then click
-                        the size you want. The image saves directly to your device — no extra steps needed.
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-4">
-                    <button
-                        class="faq-btn flex justify-between items-center w-full text-left font-semibold text-gray-800"
-                        onclick="toggleFAQ(this)" aria-expanded="false">
-                        <span>Why can't I see all thumbnail qualities for some videos?</span>
-                        <i class="fas fa-chevron-down text-blue-600 transition-transform" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer hidden mt-3 text-gray-600">
-                        Some YouTube videos may not have all thumbnail qualities available. This depends on the video
-                        upload date and settings. The MaxRes (HD) quality is only available for videos uploaded after
-                        2009 and if the uploader hasn't disabled it.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact"
-            class="scroll-mt-16 mt-20 py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In <span class="text-blue-600">Touch</span></h2>
-                <p class="text-gray-600 mb-8">Have questions or suggestions? We'd love to hear from you.</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="#"
-                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
-                        aria-label="Email us">
-                        <i class="fas fa-envelope text-2xl" aria-hidden="true"></i>
-                    </a>
-                    <a href="#"
-                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
-                        aria-label="Follow us on Twitter">
-                        <i class="fab fa-twitter text-2xl" aria-hidden="true"></i>
-                    </a>
-                    <a href="#"
-                        class="bg-white p-4 rounded-full shadow-md hover:shadow-lg transition text-blue-600 hover:text-blue-700"
-                        aria-label="Visit our GitHub">
-                        <i class="fab fa-github text-2xl" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Paragraph Section -->
-        <section class="mt-20 max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">
-                Why Thumbnail Quality Matters
-            </h2>
-            <p class="text-gray-600">
-                A video's thumbnail is often the first thing a viewer sees. Creators use
-                high-contrast images, bold text, and expressive faces to drive click-through
-                rates. Studying thumbnails from top-performing videos in your niche is one
-                of the fastest ways to improve your own design strategy.
-            </p>
-        </section>
-
-        <section class="mt-16 max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">
-                Works on Any Device, Any Video
-            </h2>
-            <p class="text-gray-600">
-                The tool supports all standard YouTube URL formats — regular videos,
-                youtu.be short links, and embedded URLs. Vimeo is also supported.
-                It works on Chrome, Firefox, Safari, and Edge across desktop and mobile.
-            </p>
-            <p class="text-gray-600 mt-3">
-                Note: MaxRes (HD) thumbnails may not be available for older videos or
-                videos where the uploader has not set a custom thumbnail.
-            </p>
-        </section>
-
-        <!-- Footer -->
-        <footer class="mt-20 border-t pt-8 pb-4 text-sm text-gray-500">
-            <div class="flex flex-wrap justify-between items-center">
-                <span>© 2026 YouTube Thumbnail Downloader. All rights reserved.</span>
-                <div class="space-x-6">
-                    <a href="#" class="hover:text-blue-600 transition" aria-label="Privacy Policy">Privacy Policy</a>
-                    <a href="#" class="hover:text-blue-600 transition" aria-label="Terms of Service">Terms of
-                        Service</a>
-                    <a href="#" class="hover:text-blue-600 transition" aria-label="Contact">Contact</a>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <script src="assets/script.js"></script>
+<script src="js/main.js"></script>
 </body>
-
 </html>

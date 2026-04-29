@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
+Disallow: /images/og-image.svg
 
-Sitemap: https://youtube-thumbnail-downloader.cc/sitemap.xml
+# Priority crawl hints
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+Sitemap: https://www.youtube-thumbnail-downloader.cc/sitemap.xml
