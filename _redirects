@@ -1,4 +1,31 @@
 https://youtube-thumbnail-downloader.cc/* https://www.youtube-thumbnail-downloader.cc/:splat 301!
-/home /index.html 301
-/download /index.html 301
-/thumbnail-downloader /tools/thumbnail-downloader.html 301
+
+# Convenience aliases
+/home / 301
+/download / 301
+/thumbnail-downloader /tools/thumbnail-downloader 301
+
+# Canonicalize every .html URL to its clean equivalent
+# (matches the canonical tags and sitemap.xml so Google gets one consistent URL per page)
+/index.html / 301
+/about.html /about 301
+/blog.html /blog 301
+/contact.html /contact 301
+/disclaimer.html /disclaimer 301
+/dmca.html /dmca 301
+/faq.html /faq 301
+/how-it-works.html /how-it-works 301
+/privacy-policy.html /privacy-policy 301
+/terms-of-service.html /terms-of-service 301
+/tools.html /tools 301
+/sitemap-page.html /sitemap-page 301
+/tools/bulk-downloader.html /tools/bulk-downloader 301
+/tools/thumbnail-downloader.html /tools/thumbnail-downloader 301
+/tools/thumbnail-preview.html /tools/thumbnail-preview 301
+/blog/how-to-download-thumbnail.html /blog/how-to-download-thumbnail 301
+/blog/perfect-youtube-thumbnail.html /blog/perfect-youtube-thumbnail 301
+/blog/thumbnail-colors.html /blog/thumbnail-colors 301
+/blog/thumbnail-ctr-tips.html /blog/thumbnail-ctr-tips 301
+/blog/thumbnail-fonts.html /blog/thumbnail-fonts 301
+/blog/youtube-thumbnail-ideas.html /blog/youtube-thumbnail-ideas 301
+/blog/youtube-thumbnail-size.html /blog/youtube-thumbnail-size 301

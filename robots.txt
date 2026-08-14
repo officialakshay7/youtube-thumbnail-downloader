@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /images/og-image.svg
 
 # Priority crawl hints
 Crawl-delay: 1
